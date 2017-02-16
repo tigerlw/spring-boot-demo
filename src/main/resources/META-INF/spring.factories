@@ -1,0 +1,6 @@
+# AutoConfiguration
+# org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+# com.ucloudlink.boot.service.configuration.MyAutoConfiguration
+
+com.ucloudlink.boot.service.EnableMyApplication=\
+com.ucloudlink.boot.service.configuration.MyAutoConfiguration
