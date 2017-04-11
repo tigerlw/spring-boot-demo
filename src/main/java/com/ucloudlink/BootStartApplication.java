@@ -8,9 +8,11 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 import com.ucloudlink.boot.service.EnableMyApplication;
 import com.ucloudlink.boot.service.configuration.PrefectBean;
+import com.ucloudlink.boot.service.configuration.SecAutoConfiguration;
 
-@EnableAutoConfiguration
-@EnableMyApplication
+//@EnableAutoConfiguration
+//@EnableMyApplication
+@SpringBootApplication
 public class BootStartApplication 
 {
 	
@@ -18,9 +20,9 @@ public class BootStartApplication
 	{
 		ConfigurableApplicationContext context = SpringApplication.run(BootStartApplication.class, args);
 		
-		PrefectBean bean = context.getBean(PrefectBean.class);
+		SecAutoConfiguration bean = context.getBean(SecAutoConfiguration.class);
 		
-		System.out.println(bean.getOutput());
+		System.out.println(bean.queryBean());
 		
 		
 	}
