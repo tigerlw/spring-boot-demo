@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<workbook>
+    <worksheet name="Sheet1">
+         <section startRow="0" endRow="1"/>
+        <loop startRow="1" endRow="1" items="users" var="user" varType="com.ucloudlink.boot.domain.User">
+            <section startRow="1" endRow="1">
+                <mapping cell="A2">user.userName</mapping>
+                <mapping cell="B2">user.age</mapping>
+                <mapping cell="C2">user.country</mapping>
+                <mapping cell="D2">user.address</mapping>
+            </section>
+            <loopbreakcondition>
+                <rowcheck offset="0">
+                    <cellcheck offset="0"></cellcheck>
+                </rowcheck>
+            </loopbreakcondition>
+        </loop>
+    </worksheet>
+</workbook>

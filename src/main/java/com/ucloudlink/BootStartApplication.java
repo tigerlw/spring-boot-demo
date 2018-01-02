@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
+import com.ucloudlink.akka.main.RouterActorMain;
 import com.ucloudlink.boot.service.EnableMyApplication;
 import com.ucloudlink.boot.service.configuration.PrefectBean;
 import com.ucloudlink.boot.service.configuration.SecAutoConfiguration;
@@ -20,9 +21,11 @@ public class BootStartApplication
 	{
 		ConfigurableApplicationContext context = SpringApplication.run(BootStartApplication.class, args);
 		
-		SecAutoConfiguration bean = context.getBean(SecAutoConfiguration.class);
+		//RouterActorMain.main(args);
 		
-		System.out.println(bean.queryBean());
+		/*SecAutoConfiguration bean = context.getBean(SecAutoConfiguration.class);
+		
+		System.out.println(bean.queryBean());*/
 		
 		
 	}

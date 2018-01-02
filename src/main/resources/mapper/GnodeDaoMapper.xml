@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ucloudlink.boot.dao.GnodeDao">
+    <resultMap id="gnodeMap" type="com.ucloudlink.boot.domain.GnodeBO">
+        <result property="ipaddress" column="ipaddress"/>
+        <result property="servPort" column="servport"/>
+    </resultMap>
+	
+	<select id="queryAll" parameterType="java.util.Map" resultMap="gnodeMap">
+	    select ipaddress,servport from t_g_node
+	</select>
+</mapper>
