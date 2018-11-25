@@ -2,7 +2,7 @@
 <workbook>
     <worksheet name="Sheet1">
          <section startRow="0" endRow="1"/>
-        <loop startRow="1" endRow="1" items="users" var="user" varType="com.ucloudlink.boot.domain.User">
+        <loop startRow="1" endRow="1" items="users" var="user" varType="com.camp.boot.domain.User">
             <section startRow="1" endRow="1">
                 <mapping cell="A2">user.userName</mapping>
                 <mapping cell="B2">user.age</mapping>

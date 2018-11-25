@@ -28,7 +28,7 @@
 		</RollingRandomAccessFile>
 	</appenders>
 	<loggers>
-		<logger name="com.ucloudlink" additivity="false" level="DEBUG">
+		<logger name="com.camp" additivity="false" level="DEBUG">
 			<AppenderRef ref="App" />
 			<AppenderRef ref="STDOUT" />
 		</logger>

@@ -1,7 +1,7 @@
 # AutoConfiguration
 # org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-# com.ucloudlink.boot.service.configuration.MyAutoConfiguration
+# com.camp.boot.service.configuration.MyAutoConfiguration
 
-com.ucloudlink.boot.service.EnableMyApplication=\
-com.ucloudlink.boot.service.configuration.MyAutoConfiguration,\
-com.ucloudlink.boot.service.configuration.SecAutoConfiguration
+com.camp.boot.service.EnableMyApplication=\
+com.camp.boot.service.configuration.MyAutoConfiguration,\
+com.camp.boot.service.configuration.SecAutoConfiguration
