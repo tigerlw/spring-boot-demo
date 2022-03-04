@@ -15,7 +15,6 @@ import javax.sql.DataSource;
 public class MyBatisConfig {
 
     @Autowired
-    @Qualifier("dataSourceC")
     private DataSource dataSource;
 
     @Bean(name = "sqlSessionFactory")

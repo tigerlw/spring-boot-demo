@@ -11,6 +11,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.core.env.Environment;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 import io.shardingjdbc.core.api.ShardingDataSourceFactory;
@@ -24,7 +27,7 @@ public class DBconfig {
     @Autowired
     private Environment env;
 
-    @Bean(name="dataSourceC")
+    @Bean
     public ComboPooledDataSource dataSource() throws PropertyVetoException {
         ComboPooledDataSource dataSource = new ComboPooledDataSource();
         dataSource.setDriverClass(env.getProperty("ms.db.driverClassName"));
@@ -40,17 +43,19 @@ public class DBconfig {
         return dataSource;
     }
     
-    @Bean(name="dataSourceS")
-    @Primary
-    public DataSource  shareDataSource()
+   /* @Bean(name="dataSourceS")
+    @Primary*/
+    public DataSource  shareDataSource() throws IOException
     {
-    	ClassLoader classLoader = getClass().getClassLoader();
+    	/*ClassLoader classLoader = getClass().getClassLoader();
     	
-    	URL url = classLoader.getResource("jdbc.yaml");
+    	URL url = classLoader.getResource("jdbc.yaml");*/
     	
-    	File jdbcFile = new File(url.getFile());
+    	Resource res = new ClassPathResource("jdbc.yaml");
+    	
+    	File jdbcFile = res.getFile();
     	DataSource dataSource = null;
-		try {
+		/*try {
 			dataSource = ShardingDataSourceFactory.createDataSource(jdbcFile);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -58,7 +63,7 @@ public class DBconfig {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
     	
     	return dataSource;
     }

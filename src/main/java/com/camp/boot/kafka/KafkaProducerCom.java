@@ -15,7 +15,7 @@ import com.alibaba.fastjson.JSON;
 @Component
 public class KafkaProducerCom 
 {
-	@Autowired
+	//@Autowired
 	private KafkaProducer<String, String> producer;
 	
 	

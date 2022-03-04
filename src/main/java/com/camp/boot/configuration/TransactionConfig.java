@@ -15,7 +15,7 @@ import javax.sql.DataSource;
 @ComponentScan
 public class TransactionConfig implements TransactionManagementConfigurer{
     @Autowired
-    @Qualifier("dataSourceC")
+    @Qualifier("dataSource")
     private DataSource dataSource;
 
     @Bean(name = "transactionManager")

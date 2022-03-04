@@ -18,7 +18,7 @@ public class KafkaConsumerConfig
 	@Autowired
     private Environment env;
 	
-	@Bean
+	//@Bean
 	public KafkaConsumerCollection createConsumerCollection()
 	{
 		List<String> consumers = Arrays.asList(env.getProperty("kafka.consumers").split(","));

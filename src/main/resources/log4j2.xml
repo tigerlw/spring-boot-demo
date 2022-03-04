@@ -34,8 +34,9 @@
 		</logger>
 		<logger name="org.springframework" additivity="false" level="ERROR">
 			<AppenderRef ref="App" />
+			<AppenderRef ref="STDOUT" />
 		</logger>
-		<root level="ERROR">
+		<root level="DEBUG">
 			<AppenderRef ref="App" />
 
 		</root>
